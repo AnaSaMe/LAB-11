@@ -80,7 +80,7 @@ head(M[,1:6])
 #con el input de la matriz en negativo que se acaba de generar
 red_hidalgo2 <- graph.adjacency(M, mode = "undirected" , weighted = TRUE)
 MST <- minimum.spanning.tree(red_hidalgo2)
-plot(MST, vertex.shapes = "none", vertex.label.cex=.7)
+plot(MST, vertex.shapes="none", vertex.label.cex=.7)
 
 #Exportar red en formato gml
 write.graph(MST,file = "redhidalgo2.gml", format = "gml")
@@ -91,3 +91,4 @@ A <- get.adjacency(MST, sparse = F)
 
 #exportar matriz de proximos adyacentes
 write.csv(A, file = "AdyacebtesConMST.csv")
+
